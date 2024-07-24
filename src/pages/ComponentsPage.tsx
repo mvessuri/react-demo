@@ -15,6 +15,8 @@ import {
   ListItem,
   ListItemText,
   Paper,
+  Rating,
+  Stack
 } from '@mui/material';
 
 import HorizontalStepper from '../components/StepperComponent';
@@ -110,6 +112,14 @@ const ComponentsPage = () => {
             </ListItem>
           </List>
 
+          <Typography variant="h5" gutterBottom>
+            Rating
+          </Typography>
+          <Stack spacing={1}>
+            <Rating name="full-rating" value={4} />
+            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+            <Rating name="read-only-rating" value={4} readOnly />
+          </Stack>
         </Grid>
         <Grid item xs={12} sm={6}>
 
